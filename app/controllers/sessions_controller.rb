@@ -15,7 +15,7 @@ def create
 	# match them to their password
 	if u && u.authenticate(params[:user][:password])
 		session[:user_id] = u.id.to_s
-		redirect_to user_path(u.id)
+		redirect_to root_path
 	else
 		redirect_to new_session_path
 	end

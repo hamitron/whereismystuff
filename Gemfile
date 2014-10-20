@@ -33,6 +33,7 @@ group :test do
 	gem 'guard-rspec' 
 	gem 'launchy' 
 end
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
