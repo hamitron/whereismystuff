@@ -1,0 +1,23 @@
+
+
+<div ng-controller="ItemCtrl">
+	<form ng-submit="createItem()">
+ 		<input type="text" ng-model="newName" placeholder="What?">
+ 		<input type="text" ng-model="newLocation" placeholder="Where?">
+ 		<input type="submit" value="Add">
+	</form>
+	
+	<table >
+	<tr>
+		<th>What is it?</th>
+		<th>Where is it?</th>
+		<th>X</th>
+	</tr>
+	<tr ng-repeat="Item in Items">
+		<td>{{Item.name}}</td>
+		<td>{{Item.location}}</td>
+		<td><a href='#' ng-click="deleteItem(Item.id, $index)">X</a></td>
+	</tr>
+	</table>
+
+</div>
