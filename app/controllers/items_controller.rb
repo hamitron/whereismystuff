@@ -13,14 +13,12 @@ class ItemsController < ApplicationController
 
 	def destroy
 		respond_with Item.destroy(params[:id])
-
-
 	end
 
 private
 
-def items_params
-	params.require(:item).permit(:name, :location)
-end
+	def items_params
+		params.require(:item).permit(:name, :location)
+	end
 
 end

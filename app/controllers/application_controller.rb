@@ -6,11 +6,11 @@ include ActionController::Serialization
   protect_from_forgery with: :exception
   serialization_scope :view_context
 
-#   helper_method :current_user
+  helper_method :current_user
   
-# def current_user
-#   @current_user ||= User.find(session[:user_id]) if session[:user_id]
-# end
+def current_user
+  @current_user ||= User.find(session[:user_id]) if session[:user_id]
+end
 
 def default_serializer_options
     { root: false }
