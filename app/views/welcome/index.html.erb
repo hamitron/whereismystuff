@@ -1,17 +1,21 @@
 
 
 <div ng-controller="ItemCtrl">
-	<form ng-submit="createItem()">
- 		<input type="text" ng-model="newName" placeholder="What?">
- 		<input type="text" ng-model="newLocation" placeholder="Where?">
- 		<input type="submit" value="Add">
-	</form>
+
+<div class="container">
 	
-	<table >
+	
+	
+	<table class="table">
+	<h1> whereismystuff </h1>
 	<tr>
-		<th>What is it?</th>
-		<th>Where is it?</th>
-		<th>X</th>
+		<form class="table" ng-submit="createItem()">
+ 			<th>What is it? <input type="text" ng-model="newName" placeholder="What?"> </th>
+ 			<th>Where is it?<input type="text" ng-model="newLocation" placeholder="Where?"></th>
+ 			<th><input type="submit" value="Add"></th>
+ 		</form>
+				
+		
 	</tr>
 	<tr ng-repeat="Item in Items">
 		<td>{{Item.name}}</td>
@@ -20,4 +24,5 @@
 	</tr>
 	</table>
 
+</div>
 </div>
